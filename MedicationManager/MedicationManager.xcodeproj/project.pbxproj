@@ -19,6 +19,7 @@
 		51DC93F126AF1CA6001C2534 /* MedicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC93F026AF1CA6001C2534 /* MedicationTableViewCell.swift */; };
 		51DC93F326AF21FF001C2534 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC93F226AF21FF001C2534 /* CoreDataStack.swift */; };
 		51DC93F526AF27EE001C2534 /* Medication+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC93F426AF27EE001C2534 /* Medication+Convenience.swift */; };
+		51DC93F726AF2E2F001C2534 /* MedicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC93F626AF2E2F001C2534 /* MedicationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		51DC93F026AF1CA6001C2534 /* MedicationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationTableViewCell.swift; sourceTree = "<group>"; };
 		51DC93F226AF21FF001C2534 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		51DC93F426AF27EE001C2534 /* Medication+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Medication+Convenience.swift"; sourceTree = "<group>"; };
+		51DC93F626AF2E2F001C2534 /* MedicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		51DC93E926AF1092001C2534 /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
+				51DC93F626AF2E2F001C2534 /* MedicationController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				51DC93ED26AF1BAD001C2534 /* MedicationListViewController.swift in Sources */,
 				33A61CB9258F2E6E00B62B2F /* MedicationManager.xcdatamodeld in Sources */,
 				33A61CB1258F2E6E00B62B2F /* SceneDelegate.swift in Sources */,
+				51DC93F726AF2E2F001C2534 /* MedicationController.swift in Sources */,
 				51DC93F326AF21FF001C2534 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
