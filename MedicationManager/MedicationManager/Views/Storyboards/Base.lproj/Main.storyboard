@@ -75,6 +75,9 @@
                                                         <imageReference key="image" image="square" catalog="system" symbolScale="large"/>
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="hasBeenTakenButtonTapped:" destination="qSS-ch-EKO" eventType="touchUpInside" id="fOY-qK-OKd"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -89,6 +92,9 @@
                                             <constraint firstItem="oxL-HG-um6" firstAttribute="centerY" secondItem="qSS-ch-EKO" secondAttribute="centerY" id="K8q-Bh-25J"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="doseageTimeLabel" destination="nzB-LD-UAB" id="UEa-RW-kwR"/>
+                                            <outlet property="hasBeenTakenButton" destination="iaI-bn-GkY" id="NoT-WH-X0p"/>
+                                            <outlet property="titleLabel" destination="8KJ-Q0-ddS" id="8PA-hO-2xH"/>
                                             <segue destination="YPB-02-Pdg" kind="show" identifier="toEditMedication" id="CWU-Fy-F3M"/>
                                         </connections>
                                     </tableViewCell>
