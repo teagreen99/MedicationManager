@@ -19,5 +19,19 @@ enum CoreDataStack {
         }
         return container
     }()
+    
+    static var context: NSManagedObjectContext {
+        container.viewContext
+    }
+    
+    static func saveContext() {
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                print("Error saving context \(error)")
+            }
+        }
+    }
 } // End of enum
 
