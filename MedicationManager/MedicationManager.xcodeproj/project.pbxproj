@@ -43,6 +43,7 @@
 			isa = PBXGroup;
 			children = (
 				33A61CAD258F2E6E00B62B2F /* MedicationManager */,
+				51DC93E326AF0FDC001C2534 /* Resources */,
 				33A61CAC258F2E6E00B62B2F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,16 +59,79 @@
 		33A61CAD258F2E6E00B62B2F /* MedicationManager */ = {
 			isa = PBXGroup;
 			children = (
-				33A61CAE258F2E6E00B62B2F /* AppDelegate.swift */,
-				33A61CB0258F2E6E00B62B2F /* SceneDelegate.swift */,
-				33A61CB2258F2E6E00B62B2F /* ViewController.swift */,
-				33A61CB4258F2E6E00B62B2F /* Main.storyboard */,
-				33A61CBA258F2E7000B62B2F /* Assets.xcassets */,
-				33A61CBC258F2E7000B62B2F /* LaunchScreen.storyboard */,
-				33A61CBF258F2E7000B62B2F /* Info.plist */,
-				33A61CB7258F2E6E00B62B2F /* MedicationManager.xcdatamodeld */,
+				51DC93EB26AF11CF001C2534 /* CoreData */,
+				51DC93E626AF1049001C2534 /* Controllers */,
+				51DC93E426AF1039001C2534 /* Views */,
 			);
 			path = MedicationManager;
+			sourceTree = "<group>";
+		};
+		51DC93E326AF0FDC001C2534 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				33A61CAE258F2E6E00B62B2F /* AppDelegate.swift */,
+				33A61CB0258F2E6E00B62B2F /* SceneDelegate.swift */,
+				33A61CBA258F2E7000B62B2F /* Assets.xcassets */,
+				33A61CBF258F2E7000B62B2F /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		51DC93E426AF1039001C2534 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				51DC93E726AF1075001C2534 /* CustomViews */,
+				51DC93EA26AF10A0001C2534 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		51DC93E626AF1049001C2534 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				51DC93E926AF1092001C2534 /* ModelControllers */,
+				51DC93E826AF1085001C2534 /* ViewControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		51DC93E726AF1075001C2534 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		51DC93E826AF1085001C2534 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				33A61CB2258F2E6E00B62B2F /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		51DC93E926AF1092001C2534 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		51DC93EA26AF10A0001C2534 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				33A61CBC258F2E7000B62B2F /* LaunchScreen.storyboard */,
+				33A61CB4258F2E6E00B62B2F /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		51DC93EB26AF11CF001C2534 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				33A61CB7258F2E6E00B62B2F /* MedicationManager.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,7 +356,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P37KHYUXQV;
-				INFOPLIST_FILE = MedicationManager/Info.plist;
+				INFOPLIST_FILE = MedicationManager/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +375,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P37KHYUXQV;
-				INFOPLIST_FILE = MedicationManager/Info.plist;
+				INFOPLIST_FILE = MedicationManager/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
