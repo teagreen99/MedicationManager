@@ -20,6 +20,7 @@
 		51DC93F326AF21FF001C2534 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC93F226AF21FF001C2534 /* CoreDataStack.swift */; };
 		51DC93F526AF27EE001C2534 /* Medication+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC93F426AF27EE001C2534 /* Medication+Convenience.swift */; };
 		51DC93F726AF2E2F001C2534 /* MedicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC93F626AF2E2F001C2534 /* MedicationController.swift */; };
+		51DC93FA26AF3841001C2534 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC93F926AF3841001C2534 /* DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		51DC93F226AF21FF001C2534 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		51DC93F426AF27EE001C2534 /* Medication+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Medication+Convenience.swift"; sourceTree = "<group>"; };
 		51DC93F626AF2E2F001C2534 /* MedicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationController.swift; sourceTree = "<group>"; };
+		51DC93F926AF3841001C2534 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				33A61CAD258F2E6E00B62B2F /* MedicationManager */,
-				51DC93E326AF0FDC001C2534 /* Resources */,
 				33A61CAC258F2E6E00B62B2F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +75,8 @@
 				51DC93EB26AF11CF001C2534 /* CoreData */,
 				51DC93E626AF1049001C2534 /* Controllers */,
 				51DC93E426AF1039001C2534 /* Views */,
+				51DC93F826AF3821001C2534 /* Helpers+Extensions */,
+				51DC93E326AF0FDC001C2534 /* Resources */,
 			);
 			path = MedicationManager;
 			sourceTree = "<group>";
@@ -152,6 +155,14 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		51DC93F826AF3821001C2534 /* Helpers+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				51DC93F926AF3841001C2534 /* DateFormatter.swift */,
+			);
+			path = "Helpers+Extensions";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,6 +238,7 @@
 				33A61CB3258F2E6E00B62B2F /* ViewController.swift in Sources */,
 				33A61CAF258F2E6E00B62B2F /* AppDelegate.swift in Sources */,
 				51DC93F126AF1CA6001C2534 /* MedicationTableViewCell.swift in Sources */,
+				51DC93FA26AF3841001C2534 /* DateFormatter.swift in Sources */,
 				51DC93ED26AF1BAD001C2534 /* MedicationListViewController.swift in Sources */,
 				33A61CB9258F2E6E00B62B2F /* MedicationManager.xcdatamodeld in Sources */,
 				33A61CB1258F2E6E00B62B2F /* SceneDelegate.swift in Sources */,

@@ -9,12 +9,19 @@ import UIKit
 
 class MedicationListViewController: UIViewController {
 
+    // MARK: - IBOutlets
+    @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
 
         // Do any additional setup after loading the view.
     }
     
+    // MARK: - Helper Methods
 
     /*
     // MARK: - Navigation
@@ -27,3 +34,19 @@ class MedicationListViewController: UIViewController {
     */
 
 }
+
+extension MedicationListViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return MedicationController.sharedInstance.medications.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "medicationCell", for: indexPath) as? MedicationTableViewCell else { return UITableViewCell() }
+        
+        let medication = MedicationController.sharedInstance.medications[indexPath.row]
+        
+        
+        
+        return cell
+    }
+} // End of extension

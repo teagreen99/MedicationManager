@@ -8,16 +8,22 @@
 import UIKit
 
 class MedicationTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var doseageTimeLabel: UILabel!
+    @IBOutlet weak var hasBeenTakenButton: UIButton!
+    
+    // MARK: - Properties
+    
+    // MARK: - IBActions
+    @IBAction func hasBeenTakenButtonTapped(_ sender: Any) {
+        
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    // MARK: - Functions
+    func configure(with medication: Medication) {
+        titleLabel.text = medication.name
+        doseageTimeLabel.text = medication.timeOfDay?.dateAsString()
     }
-
-}
+} // End of class
