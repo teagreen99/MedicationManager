@@ -41,6 +41,11 @@ class MedicationListViewController: UIViewController {
 }
 
 extension MedicationListViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return MedicationController.sharedInstance.sections.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return MedicationController.sharedInstance.sections[section].count
     }
@@ -53,6 +58,15 @@ extension MedicationListViewController: UITableViewDelegate, UITableViewDataSour
         cell.configure(with: medication)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Not Taken"
+        } else if section == 1 {
+            return "Taken"
+        }
+        return nil
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
