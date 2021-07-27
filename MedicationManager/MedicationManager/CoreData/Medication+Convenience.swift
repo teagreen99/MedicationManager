@@ -16,7 +16,7 @@ extension Medication {
     } // End of initializer
     
     func wasTakenToday() -> Bool {
-        guard let date = (takenDates as? Set<TakenDate>)?.first(where: { takenDate in
+        guard let _ = (takenDates as? Set<TakenDate>)?.first(where: { takenDate in
             guard let day = takenDate.date else { return false }
             
             return Calendar.current.isDate(day, inSameDayAs: Date())

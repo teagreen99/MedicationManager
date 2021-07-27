@@ -25,14 +25,25 @@ class MedicationTableViewCell: UITableViewCell {
     
     // MARK: - IBActions
     @IBAction func hasBeenTakenButtonTapped(_ sender: Any) {
-        
+        guard let medication = medication else { return }
+        wasTakenToday.toggle()
+        delegate?.medicationWasTakenTapped(wasTaken: wasTakenToday, medication: medication)
     }
     
     // MARK: - Functions
     func configure(with medication: Medication) {
         self.medication = medication
-        
+        wasTakenToday = medication.wasTakenToday()
         titleLabel.text = medication.name
         doseageTimeLabel.text = medication.timeOfDay?.dateAsString()
+        
+        let image = wasTakenToday ? UIImage(systemName: "checkmark.square") : UIImage(systemName: "square")
+        hasBeenTakenButton.setImage(image, for: .normal)
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        medication = nil
+        wasTakenToday = false
     }
 } // End of class

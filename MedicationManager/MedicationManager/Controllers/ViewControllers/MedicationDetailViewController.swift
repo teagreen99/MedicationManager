@@ -28,7 +28,7 @@ class MedicationDetailViewController: UIViewController {
         guard let name = nameTextField.text,
               !name.isEmpty else { return }
         if let medication = medication {
-            MedicationController.sharedInstance.updateMedication(medication, name: name, date: datePicker.date)
+            MedicationController.sharedInstance.updateMedicationDetails(medication, name: name, date: datePicker.date)
         } else {
             MedicationController.sharedInstance.createMedication(name: name, timeOfDay: datePicker.date)
         }
