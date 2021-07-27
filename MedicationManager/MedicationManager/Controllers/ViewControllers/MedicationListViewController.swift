@@ -34,7 +34,7 @@ class MedicationListViewController: UIViewController {
         if segue.identifier == "toEditMedication" {
             guard let indexPath = tableView.indexPathForSelectedRow,
                   let destination = segue.destination as? MedicationDetailViewController else { return }
-            let medication = MedicationController.sharedInstance.medications[indexPath.row]
+            let medication = MedicationController.sharedInstance.sections[indexPath.section][indexPath.row]
             destination.medication = medication
         }
     }
@@ -42,13 +42,13 @@ class MedicationListViewController: UIViewController {
 
 extension MedicationListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return MedicationController.sharedInstance.medications.count
+        return MedicationController.sharedInstance.sections[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "medicationCell", for: indexPath) as? MedicationTableViewCell else { return UITableViewCell() }
         
-        let medication = MedicationController.sharedInstance.medications[indexPath.row]
+        let medication = MedicationController.sharedInstance.sections[indexPath.section][indexPath.row]
         
         cell.configure(with: medication)
         
