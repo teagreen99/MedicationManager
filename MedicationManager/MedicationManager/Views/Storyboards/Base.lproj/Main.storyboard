@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -39,6 +38,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="medicationCell" rowHeight="95" id="qSS-ch-EKO" customClass="MedicationTableViewCell" customModule="MedicationManager" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="95"/>
@@ -47,49 +47,54 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="oxL-HG-um6">
-                                                    <rect key="frame" x="16" y="16.5" width="336.5" height="62"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ab4-Rr-e0c">
+                                                    <rect key="frame" x="10.5" y="0.0" width="393" height="95"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(medicationName)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8KJ-Q0-ddS">
-                                                            <rect key="frame" x="0.0" y="0.0" width="336.5" height="23"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(medicationTime)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nzB-LD-UAB">
-                                                            <rect key="frame" x="0.0" y="39" width="336.5" height="23"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="oxL-HG-um6">
+                                                            <rect key="frame" x="0.0" y="16.5" width="282" height="62"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(medicationName)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8KJ-Q0-ddS">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="282" height="23"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(medicationTime)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nzB-LD-UAB">
+                                                                    <rect key="frame" x="0.0" y="39" width="282" height="23"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaI-bn-GkY">
+                                                            <rect key="frame" x="298" y="0.0" width="95" height="95"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="iaI-bn-GkY" secondAttribute="height" multiplier="1:1" id="GHk-2c-h7b"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <state key="normal" image="square" catalog="system">
+                                                                <color key="titleColor" systemColor="labelColor"/>
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40" scale="large" weight="black"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="hasBeenTakenButtonTapped:" destination="qSS-ch-EKO" eventType="touchUpInside" id="fOY-qK-OKd"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                 </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaI-bn-GkY">
-                                                    <rect key="frame" x="368.5" y="33" width="29.5" height="29"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="iaI-bn-GkY" secondAttribute="height" multiplier="1:1" id="GHk-2c-h7b"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <state key="normal">
-                                                        <imageReference key="image" image="square" catalog="system" symbolScale="large"/>
-                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="hasBeenTakenButtonTapped:" destination="qSS-ch-EKO" eventType="touchUpInside" id="fOY-qK-OKd"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="oxL-HG-um6" firstAttribute="leading" secondItem="fhb-lh-nTq" secondAttribute="leading" constant="16" id="0j8-d5-DCS"/>
-                                                <constraint firstItem="iaI-bn-GkY" firstAttribute="leading" secondItem="oxL-HG-um6" secondAttribute="trailing" constant="16" id="pgf-b1-Yx3"/>
-                                                <constraint firstAttribute="trailing" secondItem="iaI-bn-GkY" secondAttribute="trailing" constant="16" id="umJ-PQ-rsY"/>
+                                                <constraint firstItem="Ab4-Rr-e0c" firstAttribute="leading" secondItem="fhb-lh-nTq" secondAttribute="leadingMargin" id="Nko-Mz-c49"/>
+                                                <constraint firstItem="Ab4-Rr-e0c" firstAttribute="top" secondItem="fhb-lh-nTq" secondAttribute="topMargin" id="Vh9-qG-5VV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <constraints>
-                                            <constraint firstItem="iaI-bn-GkY" firstAttribute="height" secondItem="qSS-ch-EKO" secondAttribute="height" multiplier="0.309278" id="290-g6-Dgd"/>
-                                            <constraint firstItem="iaI-bn-GkY" firstAttribute="centerY" secondItem="qSS-ch-EKO" secondAttribute="centerY" id="BYD-tV-fUF"/>
-                                            <constraint firstItem="oxL-HG-um6" firstAttribute="centerY" secondItem="qSS-ch-EKO" secondAttribute="centerY" id="K8q-Bh-25J"/>
+                                            <constraint firstItem="Ab4-Rr-e0c" firstAttribute="centerX" secondItem="qSS-ch-EKO" secondAttribute="centerX" id="4vP-Uf-msP"/>
+                                            <constraint firstItem="Ab4-Rr-e0c" firstAttribute="width" secondItem="qSS-ch-EKO" secondAttribute="width" multiplier="0.95" id="DQe-7U-LlY"/>
+                                            <constraint firstItem="Ab4-Rr-e0c" firstAttribute="centerY" secondItem="qSS-ch-EKO" secondAttribute="centerY" id="az1-Ce-0VV"/>
+                                            <constraint firstItem="Ab4-Rr-e0c" firstAttribute="height" secondItem="qSS-ch-EKO" secondAttribute="height" id="sjj-FC-zAJ"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="doseageTimeLabel" destination="nzB-LD-UAB" id="UEa-RW-kwR"/>
@@ -162,8 +167,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="or0-2o-C2c">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gSY-47-SDz"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gSY-47-SDz">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="YPB-02-Pdg" id="5ws-9Y-tpK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="0zL-u9-jLa" id="zRd-3F-GOK"/>
+                        <outlet property="nameTextField" destination="oaK-pj-kgj" id="RxP-Ha-3ok"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHb-en-HpP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -175,6 +188,9 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="square" catalog="system" width="128" height="114"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

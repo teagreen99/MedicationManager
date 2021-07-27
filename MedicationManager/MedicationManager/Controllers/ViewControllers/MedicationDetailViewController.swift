@@ -9,21 +9,39 @@ import UIKit
 
 class MedicationDetailViewController: UIViewController {
 
+    // MARK: - IBOutlets
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    // MARK: - Properties
+    var medication: Medication?
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateViews()
+     
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - IBActions
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        guard let name = nameTextField.text,
+              !name.isEmpty else { return }
+        if let medication = medication {
+            MedicationController.sharedInstance.updateMedication(medication, name: name, date: datePicker.date)
+        } else {
+            MedicationController.sharedInstance.createMedication(name: name, timeOfDay: datePicker.date)
+        }
+        navigationController?.popViewController(animated: true)
     }
-    */
 
-}
+    
+    // MARK: - Functions
+    func updateViews() {
+        guard let medication = medication else { return }
+        nameTextField.text = medication.name
+        datePicker.date = medication.timeOfDay ?? Date()
+    }
+
+
+} // End of class
