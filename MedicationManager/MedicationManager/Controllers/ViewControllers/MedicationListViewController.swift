@@ -17,22 +17,27 @@ class MedicationListViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-
-        // Do any additional setup after loading the view.
+        MedicationController.sharedInstance.fetchMedications()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.reloadData()
     }
     
     // MARK: - Helper Methods
 
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toEditMedication" {
+            guard let indexPath = tableView.indexPathForSelectedRow,
+                  let destination = segue.destination as? MedicationDetailViewController else { return }
+            let medication = MedicationController.sharedInstance.medications[indexPath.row]
+            destination.medication = medication
+        }
     }
-    */
-
 }
 
 extension MedicationListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -45,8 +50,12 @@ extension MedicationListViewController: UITableViewDelegate, UITableViewDataSour
         
         let medication = MedicationController.sharedInstance.medications[indexPath.row]
         
-        
+        cell.configure(with: medication)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 } // End of extension

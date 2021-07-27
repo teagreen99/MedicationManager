@@ -36,7 +36,7 @@ class MedicationController {
         self.medications = medications
     } // End of function
     
-    func updateMedication(medication: Medication, name: String, date: Date) {
+    func updateMedication(_ medication: Medication, name: String, date: Date) {
         medication.name = name
         medication.timeOfDay = date
         
