@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		33A61CAF258F2E6E00B62B2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A61CAE258F2E6E00B62B2F /* AppDelegate.swift */; };
 		33A61CB1258F2E6E00B62B2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A61CB0258F2E6E00B62B2F /* SceneDelegate.swift */; };
-		33A61CB3258F2E6E00B62B2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A61CB2258F2E6E00B62B2F /* ViewController.swift */; };
 		33A61CB6258F2E6E00B62B2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A61CB4258F2E6E00B62B2F /* Main.storyboard */; };
 		33A61CB9258F2E6E00B62B2F /* MedicationManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33A61CB7258F2E6E00B62B2F /* MedicationManager.xcdatamodeld */; };
 		33A61CBB258F2E7000B62B2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33A61CBA258F2E7000B62B2F /* Assets.xcassets */; };
@@ -25,13 +24,13 @@
 		51DC93FE26B1BD62001C2534 /* MoodSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC93FD26B1BD62001C2534 /* MoodSurveyViewController.swift */; };
 		51DC940026B1C875001C2534 /* MoodSurvey+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC93FF26B1C875001C2534 /* MoodSurvey+Convenience.swift */; };
 		51DC940226B1C9DE001C2534 /* MoodSurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC940126B1C9DE001C2534 /* MoodSurveyController.swift */; };
+		51DC940426B1DC72001C2534 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC940326B1DC72001C2534 /* StringConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		33A61CAB258F2E6E00B62B2F /* MedicationManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicationManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33A61CAE258F2E6E00B62B2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33A61CB0258F2E6E00B62B2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		33A61CB2258F2E6E00B62B2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		33A61CB5258F2E6E00B62B2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33A61CB8258F2E6E00B62B2F /* MedicationManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MedicationManager.xcdatamodel; sourceTree = "<group>"; };
 		33A61CBA258F2E7000B62B2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +47,7 @@
 		51DC93FD26B1BD62001C2534 /* MoodSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSurveyViewController.swift; sourceTree = "<group>"; };
 		51DC93FF26B1C875001C2534 /* MoodSurvey+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodSurvey+Convenience.swift"; sourceTree = "<group>"; };
 		51DC940126B1C9DE001C2534 /* MoodSurveyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSurveyController.swift; sourceTree = "<group>"; };
+		51DC940326B1DC72001C2534 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +129,6 @@
 		51DC93E826AF1085001C2534 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				33A61CB2258F2E6E00B62B2F /* ViewController.swift */,
 				51DC93EC26AF1BAD001C2534 /* MedicationListViewController.swift */,
 				51DC93EE26AF1BCB001C2534 /* MedicationDetailViewController.swift */,
 				51DC93FD26B1BD62001C2534 /* MoodSurveyViewController.swift */,
@@ -171,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				51DC93F926AF3841001C2534 /* DateFormatter.swift */,
+				51DC940326B1DC72001C2534 /* StringConstants.swift */,
 			);
 			path = "Helpers+Extensions";
 			sourceTree = "<group>";
@@ -247,13 +247,13 @@
 			files = (
 				51DC93F526AF27EE001C2534 /* Medication+Convenience.swift in Sources */,
 				51DC93EF26AF1BCB001C2534 /* MedicationDetailViewController.swift in Sources */,
-				33A61CB3258F2E6E00B62B2F /* ViewController.swift in Sources */,
 				51DC93FC26B062D0001C2534 /* TakenDate+Convenience.swift in Sources */,
 				51DC940026B1C875001C2534 /* MoodSurvey+Convenience.swift in Sources */,
 				33A61CAF258F2E6E00B62B2F /* AppDelegate.swift in Sources */,
 				51DC93F126AF1CA6001C2534 /* MedicationTableViewCell.swift in Sources */,
 				51DC93FA26AF3841001C2534 /* DateFormatter.swift in Sources */,
 				51DC93FE26B1BD62001C2534 /* MoodSurveyViewController.swift in Sources */,
+				51DC940426B1DC72001C2534 /* StringConstants.swift in Sources */,
 				51DC93ED26AF1BAD001C2534 /* MedicationListViewController.swift in Sources */,
 				33A61CB9258F2E6E00B62B2F /* MedicationManager.xcdatamodeld in Sources */,
 				33A61CB1258F2E6E00B62B2F /* SceneDelegate.swift in Sources */,
