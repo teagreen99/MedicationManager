@@ -11,6 +11,7 @@ class MedicationListViewController: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var moodSurveryButton: UIButton!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -25,6 +26,17 @@ class MedicationListViewController: UIViewController {
         super.viewWillAppear(true)
         tableView.reloadData()
     }
+    
+    
+    // MARK: - IBActions
+    @IBAction func moodSurveyButtonTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: .none)
+        guard let moodSurveyVC = storyboard.instantiateViewController(identifier: "moodSurveyViewController") as? MoodSurveyViewController else { return }
+        moodSurveyVC.modalPresentationStyle = .fullScreen
+        navigationController?.present(moodSurveyVC, animated: true, completion: nil)
+        
+    }
+    
     
     // MARK: - Helper Methods
 
@@ -71,5 +83,12 @@ extension MedicationListViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+} // End of extension
+
+extension MedicationListViewController: MedicationCellDelegate {
+    func medicationWasTakenTapped(wasTaken: Bool, medication: Medication) {
+        MedicationController.sharedInstance.updateMedicationStatus(wasTaken, medication: medication)
+        tableView.reloadData()
     }
 } // End of extension

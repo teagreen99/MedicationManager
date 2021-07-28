@@ -22,6 +22,7 @@
 		51DC93F726AF2E2F001C2534 /* MedicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC93F626AF2E2F001C2534 /* MedicationController.swift */; };
 		51DC93FA26AF3841001C2534 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC93F926AF3841001C2534 /* DateFormatter.swift */; };
 		51DC93FC26B062D0001C2534 /* TakenDate+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC93FB26B062D0001C2534 /* TakenDate+Convenience.swift */; };
+		51DC93FE26B1BD62001C2534 /* MoodSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC93FD26B1BD62001C2534 /* MoodSurveyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		51DC93F626AF2E2F001C2534 /* MedicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationController.swift; sourceTree = "<group>"; };
 		51DC93F926AF3841001C2534 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		51DC93FB26B062D0001C2534 /* TakenDate+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TakenDate+Convenience.swift"; sourceTree = "<group>"; };
+		51DC93FD26B1BD62001C2534 /* MoodSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSurveyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				33A61CB2258F2E6E00B62B2F /* ViewController.swift */,
 				51DC93EC26AF1BAD001C2534 /* MedicationListViewController.swift */,
 				51DC93EE26AF1BCB001C2534 /* MedicationDetailViewController.swift */,
+				51DC93FD26B1BD62001C2534 /* MoodSurveyViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				33A61CAF258F2E6E00B62B2F /* AppDelegate.swift in Sources */,
 				51DC93F126AF1CA6001C2534 /* MedicationTableViewCell.swift in Sources */,
 				51DC93FA26AF3841001C2534 /* DateFormatter.swift in Sources */,
+				51DC93FE26B1BD62001C2534 /* MoodSurveyViewController.swift in Sources */,
 				51DC93ED26AF1BAD001C2534 /* MedicationListViewController.swift in Sources */,
 				33A61CB9258F2E6E00B62B2F /* MedicationManager.xcdatamodeld in Sources */,
 				33A61CB1258F2E6E00B62B2F /* SceneDelegate.swift in Sources */,
