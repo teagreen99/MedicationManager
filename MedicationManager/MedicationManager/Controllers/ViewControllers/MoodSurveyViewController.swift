@@ -7,7 +7,14 @@
 
 import UIKit
 
+protocol MoodSurveyDelegate: AnyObject {
+    func moodButtonTapped(with emoji: String)
+}
+
 class MoodSurveyViewController: UIViewController {
+    
+    // MARK: - Properties
+    weak var delegate: MoodSurveyDelegate?
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -17,13 +24,13 @@ class MoodSurveyViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func closeButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     @IBAction func moodButtonTapped(_ sender: UIButton) {
         guard let moodEmoji = sender.titleLabel?.text else { return }
         
-        print(sender.tag, moodEmoji)
+        delegate?.moodButtonTapped(with: moodEmoji)
+        
+        dismiss(animated: true, completion: nil)
     }
-    
-   
-
 } // End of class

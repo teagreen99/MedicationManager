@@ -33,8 +33,8 @@ class MedicationListViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: .none)
         guard let moodSurveyVC = storyboard.instantiateViewController(identifier: "moodSurveyViewController") as? MoodSurveyViewController else { return }
         moodSurveyVC.modalPresentationStyle = .fullScreen
+        moodSurveyVC.delegate = self
         navigationController?.present(moodSurveyVC, animated: true, completion: nil)
-        
     }
     
     
@@ -90,5 +90,12 @@ extension MedicationListViewController: MedicationCellDelegate {
     func medicationWasTakenTapped(wasTaken: Bool, medication: Medication) {
         MedicationController.sharedInstance.updateMedicationStatus(wasTaken, medication: medication)
         tableView.reloadData()
+    }
+} // End of extension
+
+extension MedicationListViewController: MoodSurveyDelegate {
+    
+    func moodButtonTapped(with emoji: String) {
+        moodSurveryButton.setTitle(emoji, for: .normal)
     }
 } // End of extension
