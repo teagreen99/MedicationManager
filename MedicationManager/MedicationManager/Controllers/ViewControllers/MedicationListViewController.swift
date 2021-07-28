@@ -19,6 +19,8 @@ class MedicationListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         MedicationController.sharedInstance.fetchMedications()
+        MoodSurveyController.sharedInstance.fetchMoodSurvey()
+        moodSurveryButton.setTitle(MoodSurveyController.sharedInstance.todaysMoodSurvey?.mentalState ?? "😎", for: .normal)
         
     }
     
@@ -96,6 +98,7 @@ extension MedicationListViewController: MedicationCellDelegate {
 extension MedicationListViewController: MoodSurveyDelegate {
     
     func moodButtonTapped(with emoji: String) {
+        MoodSurveyController.sharedInstance.didTapMoodEmoji(emoji)
         moodSurveryButton.setTitle(emoji, for: .normal)
     }
 } // End of extension
