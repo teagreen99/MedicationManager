@@ -11,6 +11,7 @@ class MedicationController {
     
     // MARK: - Properties
     static let sharedInstance = MedicationController()
+    let notificationScheduler = NotificationScheduler()
     
     ///Index 0 == notTaken, Index 1 == taken
     var sections: [[Medication]] { [notTakenMeds, takenMeds] }
@@ -32,6 +33,8 @@ class MedicationController {
         print(sections[0][0])
         
         CoreDataStack.saveContext()
+        
+        notificationScheduler.scheduleNotification(for: medication)
     } // End of function
     
     func fetchMedications() {
@@ -45,6 +48,9 @@ class MedicationController {
         medication.timeOfDay = date
         
         CoreDataStack.saveContext()
+        if !medication.wasTakenToday() {
+            notificationScheduler.scheduleNotification(for: medication)
+        }
     } // End of function
     
     func updateMedicationStatus(_ wasTaken: Bool, medication: Medication) {
@@ -53,6 +59,7 @@ class MedicationController {
             if let index = notTakenMeds.firstIndex(of: medication) {
                 notTakenMeds.remove(at: index)
                 takenMeds.append(medication)
+                notificationScheduler.clearNotifications(for: medication)
             }
         } else {
             let mutableTakenDates = medication.mutableSetValue(forKey: "takenDates")
@@ -64,6 +71,7 @@ class MedicationController {
                 if let index = takenMeds.firstIndex(of: medication) {
                     takenMeds.remove(at: index)
                     notTakenMeds.append(medication)
+                    notificationScheduler.scheduleNotification(for: medication)
                 }
             }
         }
@@ -71,6 +79,6 @@ class MedicationController {
     } // End of function
     
     func deleteMedication() {
-        // TODO: - Fill out func
+        
     } // End of function
 } // End of class

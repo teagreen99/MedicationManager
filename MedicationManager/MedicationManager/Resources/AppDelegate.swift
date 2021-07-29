@@ -103,10 +103,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-    
 }
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
     
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler compltionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        NotificationCenter.default.post(name: Notification.Name(StringConstants.reminderReceivedNotificationName), object: nil)
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        if response.actionIdentifier == StringConstants.markTakenNotificationActionIdentifier,
+           let medicationID = response.notification.request.content.userInfo [StringConstants.medicationID] as? String {
+            print("Marked as taken. -- \(medicationID)")
+            completionHandler()
+        }
+        
+        
+    }
 } // End of extension
 

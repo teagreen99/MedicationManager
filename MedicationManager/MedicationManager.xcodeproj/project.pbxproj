@@ -25,6 +25,7 @@
 		51DC940026B1C875001C2534 /* MoodSurvey+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC93FF26B1C875001C2534 /* MoodSurvey+Convenience.swift */; };
 		51DC940226B1C9DE001C2534 /* MoodSurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC940126B1C9DE001C2534 /* MoodSurveyController.swift */; };
 		51DC940426B1DC72001C2534 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC940326B1DC72001C2534 /* StringConstants.swift */; };
+		51DC940626B1F4CD001C2534 /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC940526B1F4CD001C2534 /* NotificationScheduler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		51DC93FF26B1C875001C2534 /* MoodSurvey+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodSurvey+Convenience.swift"; sourceTree = "<group>"; };
 		51DC940126B1C9DE001C2534 /* MoodSurveyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSurveyController.swift; sourceTree = "<group>"; };
 		51DC940326B1DC72001C2534 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		51DC940526B1F4CD001C2534 /* NotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScheduler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			children = (
 				51DC93F926AF3841001C2534 /* DateFormatter.swift */,
 				51DC940326B1DC72001C2534 /* StringConstants.swift */,
+				51DC940526B1F4CD001C2534 /* NotificationScheduler.swift */,
 			);
 			path = "Helpers+Extensions";
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				51DC93ED26AF1BAD001C2534 /* MedicationListViewController.swift in Sources */,
 				33A61CB9258F2E6E00B62B2F /* MedicationManager.xcdatamodeld in Sources */,
 				33A61CB1258F2E6E00B62B2F /* SceneDelegate.swift in Sources */,
+				51DC940626B1F4CD001C2534 /* NotificationScheduler.swift in Sources */,
 				51DC93F726AF2E2F001C2534 /* MedicationController.swift in Sources */,
 				51DC940226B1C9DE001C2534 /* MoodSurveyController.swift in Sources */,
 				51DC93F326AF21FF001C2534 /* CoreDataStack.swift in Sources */,

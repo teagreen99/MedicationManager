@@ -34,10 +34,12 @@ class MedicationTableViewCell: UITableViewCell {
     func configure(with medication: Medication) {
         self.medication = medication
         wasTakenToday = medication.wasTakenToday()
+        
         titleLabel.text = medication.name
         doseageTimeLabel.text = medication.timeOfDay?.dateAsString()
         
         let image = wasTakenToday ? UIImage(systemName: "checkmark.square") : UIImage(systemName: "square")
+        print(wasTakenToday)
         hasBeenTakenButton.setImage(image, for: .normal)
     }
     
